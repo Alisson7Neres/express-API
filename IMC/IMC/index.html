@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<head>
+    <title>index</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        label{
+            font-weight: bold;
+        }
+        #resultado{
+            color: rebeccapurple;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w3-container w3-blue">
+        <h2>Calcular IMC</h2>
+    </div>
+    <br/><br/>
+    
+<div class="w3-padding w3-display-middle" style="top: 40%;width:50%;">
+    <form class="w3-container">
+        <div>
+            <label>Nome</label>
+            <input id="nome" type="text" class="w3-input">
+        </div>
+        
+        
+        <div>
+            <label>Altura</label>
+            <input id="altura" name="altura" type="number" step="0.01" class="w3-input">
+        </div>
+        
+        
+        <div>
+            <label>Peso</label>
+            <input id="peso" name="peso" type="number" class="w3-input">
+        </div>
+        
+        <div class="result" id="resultado">
+            
+            <div>
+                <label>IMC</label>
+                <input id="resultado" name="resultado" type="number" readonly class="w3-input">
+            </div>
+            <br />
+            <button id="calcular" class="w3-button w3-blue">Calcular</button>
+        </div>
+    </form>
+   
+</div>
+    <script type="text/javascript" src="controller.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    <script>
+        $('input[name="altura"]').mask('9.99');
+        $('input[name="peso"]').mask('000');
+        </script>
+
+</body>
+
+</html>
